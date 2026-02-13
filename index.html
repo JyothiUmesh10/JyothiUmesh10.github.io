@@ -1,111 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jyothi Umesh | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        h1, h2 {
-            color: #111;
-        }
-        .section {
-            margin-bottom: 50px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        a {
-            text-decoration: none;
-            color: #0066cc;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #111;
-            color: white;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+  <title>Jyothi Umesh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --card:#111827;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --link:#93c5fd;
+      --accent:#60a5fa;
+      --border: rgba(255,255,255,0.08);
+    }
+    body{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+    }
+    nav a{
+      color: var(--text);
+      text-decoration:none;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    nav a:hover{ opacity:1; text-decoration: underline; }
+    .hero{
+      margin-top: 28px;
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    }
+    h1{ margin:0 0 8px; font-size: 34px; }
+    .role{ margin:0 0 18px; color: var(--muted); font-size: 16px; }
+    .cta-row{ display:flex; gap:12px; flex-wrap: wrap; margin-top: 18px; }
+    .btn{
+      display:inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration:none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      font-weight: 600;
+    }
+    .btn.primary{
+      background: var(--accent);
+      color: #0b0f19;
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+    .grid{
+      margin-top: 22px;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+    .card{
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.03);
+    }
+    .card h2{ margin:0 0 8px; font-size: 16px; }
+    .card p{ margin:0; color: var(--muted); font-size: 14px; }
+    .footer{
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    a.inline{ color: var(--link); }
+    a.inline:hover{ text-decoration: underline; }
+  </style>
 </head>
 <body>
-    <nav style="background:#111; padding:12px 16px; border-radius:10px; margin-bottom:24px;">
-  <a href="index.html" style="color:#fff; margin-right:16px;">Home</a>
-  <a href="about.html" style="color:#fff; margin-right:16px;">About</a>
-  <a href="projects.html" style="color:#fff; margin-right:16px;">Projects</a>
-  <a href="resume.html" style="color:#fff; margin-right:16px;">Resume</a>
-  <a href="contact.html" style="color:#fff;">Contact</a>
-</nav>
+  <div class="wrap">
 
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-    <div class="section">
-        <h1>Jyothi Umesh</h1>
-        <p><strong>Business Analyst | MBA | AI & Product Enthusiast</strong></p>
-        <p>
-            <a href="https://www.linkedin.com/in/jyothitalakaduumesh" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/JyothiUmesh10" target="_blank">GitHub</a>
-        </p>
+    <div class="hero">
+      <h1>Jyothi Umesh</h1>
+      <p class="role">Business Analyst | MBA | AI & Product</p>
+
+      <p>
+        I combine structured business thinking with hands-on execution to build practical products and dashboards.
+        Interested in AI-enabled product development, KPI design, and decision support.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn" href="resume.html">Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/jyothitalakaduumesh" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/JyothiUmesh10" target="_blank">GitHub</a>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>About</h2>
-        <p>
-            I am a Business Analyst and MBA candidate with a strong interest in AI-enabled product development.
-            I combine structured business thinking with hands-on technical execution to build practical solutions.
-        </p>
+    <div class="grid">
+      <div class="card">
+        <h2>Product thinking</h2>
+        <p>Requirements → use cases → KPIs → delivery.</p>
+      </div>
+      <div class="card">
+        <h2>AI-enabled execution</h2>
+        <p>Using modern tools to accelerate from idea to working prototype.</p>
+      </div>
+      <div class="card">
+        <h2>Analytics mindset</h2>
+        <p>Dashboards and insights designed for decisions, not just visuals.</p>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>Projects</h2>
-
-        <div class="card">
-            <h3>TJEuro – Personal Budget App</h3>
-            <p>
-                Built using Python, Streamlit, and SQLite.
-                Includes structured BRD, use cases, and a monthly KPI dashboard.
-            </p>
-            <a href="https://github.com/JyothiUmesh10/TJEuro" target="_blank">View Project</a>
-        </div>
-
-        <div class="card">
-            <h3>Power BI Project 1</h3>
-            <p>
-        Business problem → key KPIs → dashboard insights (add your 1–2 line summary here).
-    </p>
-    <a href="#" target="_blank">View Dashboard</a>
-        </div>
-
-        <div class="card">
-            <h3>Power BI Project 2</h3>
-            <p>
-                Short description of the analysis, KPIs designed, and outcomes.
-            </p>
-        </div>
-
+    <div class="footer">
+      Quick link: <a class="inline" href="https://github.com/JyothiUmesh10/TJEuro" target="_blank">TJEuro on GitHub</a>
     </div>
 
-    <div class="section">
-        <h2>Resume</h2>
-        <a href="resume.pdf" class="button">Download Resume</a>
-    </div>
-
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: umeshjyothi98@gmail.com</p>
-    </div>
-
+  </div>
 </body>
 </html>
